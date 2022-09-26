@@ -103,6 +103,7 @@ section{
 
 #login-btn .btn{
     margin-top: 0;
+    font-size:medium;
 }
 
 #login-btn i{

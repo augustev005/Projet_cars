@@ -47,7 +47,7 @@ document.querySelector('.home').onmouseleave = (e) =>{
 
   document.querySelectorAll('.home-parallax').forEach(elm =>{
 
-    elm.style.transform = `translateX(0px) translateY(0px)`;
+    elm.style.transform = `translateX(-190px) translateY(210px)`;
 
   });
 

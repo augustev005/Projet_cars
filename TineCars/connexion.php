@@ -1,9 +1,9 @@
 <?php
 
-define('DBHOST','localhost');
-define('DBUSER','root');
-define('DBPASS','');
-define('DBNAME','CarDB');
+define('DBHOST','mysql-augustine.alwaysdata.net');
+define('DBUSER','augustine');
+define('DBPASS','tina@@-20');
+define('DBNAME','augustine_client');
     class Connector{
 
         protected $dsn="mysql:dbname".DBNAME.";host=".DBHOST;
