@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Car Rental System</title>
+  <title>Système De Location De Voitures</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -62,7 +62,7 @@
 
                 <p>
                  AUGUSTINE
-                  <small>Member since Nov. 2012</small>
+                  <small>Member on August. 2022</small>
                 </p>
               </li>
               <li class="user-footer">
@@ -88,7 +88,7 @@
         </div>
         <div class="pull-left info">
           <p>AUGUSTINE</p>
-          <a href=""><i class="fa fa-circle text-success"></i> User</a>
+          <a href=""><i class="fa fa-circle text-success"></i> Utilisateur</a>
         </div>
       </div> 
       <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -119,7 +119,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="car.php"><i class="fa fa-circle-o"></i> Car</a></li>
+            <li><a href="car.php"><i class="fa fa-circle-o"></i> voiture</a></li>
             <li><a href="costumer.php"><i class="fa fa-circle-o"></i> Costumer</a></li>
             <li><a href="carowner.php"><i class="fa fa-circle-o"></i> Car Owner</a></li>
           </ul>
@@ -173,7 +173,7 @@
                   <input type="text" name="nom" class="form-control"   placeholder="nom de la voiture">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Model</label>
+                  <label for="exampleInputEmail1">Modèle</label>
                   <input type="text" name="model" class="form-control"   placeholder="Model">
                 </div>
                 <div class="form-group">
@@ -189,8 +189,8 @@
           </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Fermer</button>
+                <button type="submit" class="btn btn-primary">Soumettre</button>
               </div>
             </div>
             </form>
@@ -207,7 +207,7 @@
                   <th style="width: 10%"><i class="fa fa-image"></i> Image</th>
                   <th style="width: 20%"><i class="fa fa-list-alt"></i> Immatriculation</th>
                   <th style="width: 20%"><i class="fa fa-car"></i> Nom</th>
-                  <th style="width: 15%"><i class="fa fa-car"></i> Model</th>
+                  <th style="width: 15%"><i class="fa fa-car"></i> Modèle</th>
                   <th style="width: 15%"><i class="fa fa-paint-brush"></i> Prix</th>
                   <th style="width: 20%"> </th>
                 </tr>
@@ -215,22 +215,9 @@
                 <tbody>
                 <?php
 
-                    // DECLARATION DES CONSTANTES DE CONNEXION
-                    define('DBHOST','localhost'); //SERVEUR
-                    define('DBUSER','root');     //UTILISATEUR BASE DE DONNEES
-                    define('DBPASS','');      //MOT DE PASSE
-                    define('DBNAME','CarDB');     //NOM DE LA BASE DE DONNEES
 
-                    $dsn="mysql:dbname=".DBNAME.";host=".DBHOST;
-
-                    try{
-                        //ON SE CONNECTE À LA BASE DE DONNÉES
-                        $db=new PDO($dsn,DBUSER,DBPASS);
-                        //  ON S'ASSURE D'ENVOYER LES DONNÉES EN UTF-8
-                        $db->exec('SET NAMES utf8');
-                    }catch (PDOException $e){
-                        die($e->getMessage());
-                    }
+                    require('db.php');
+    
 
                     // LA REQUETE POUR SELECTIONNER TOUTES LES VOITURES
                     $sql="SELECT * FROM `VOITURE`";
@@ -265,7 +252,7 @@
                   <th>Image</th>
                   <th>Immtriculation</th>
                   <th>nom</th>
-                  <th>Model</th>
+                  <th>Modèle</th>
                   <th>Prix</th>
                   <th> </th>
                 </tr>
@@ -278,7 +265,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Update Car Gallery</h4>
+                <h4 class="modal-title">Mise à Jour De La Galerie De Voitures</h4>
               </div>
               <div class="modal-body">
             <div class="box box-warning">
@@ -310,8 +297,8 @@
           </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">FERMER</button>
+                <button type="submit" class="btn btn-primary">Soumettre</button>
               </div>
             </div>
             </form>
@@ -334,7 +321,7 @@
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
     </div>
-    <strong>Copyright &copy; 2022 <a href="https://adminlte.io">Car Rental System</a>.</strong> All rights
+    <strong>Copyright &copy; 2022 <a href="https://adminlte.io">Système De Location De Voitures</a>.</strong> All rights
     reserved.
   </footer>
 

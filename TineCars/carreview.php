@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Car Rental System</title>
+  <title>Système De Location De Voitures</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -67,12 +67,12 @@
 
                 <p>
                  Sample Name
-                  <small>Member since Nov. 2012</small>
+                  <small>Member on August. 2022</small>
                 </p>
               </li>
               <li class="user-footer">
                 <div class="pull-center">
-              <a class="btn btn-danger" style="width: 100%" href="index.php"><i class="fa fa-spinner fa-spin"></i> Log out</a>                
+              <a class="btn btn-danger" style="width: 100%" href="index.php"><i class="fa fa-spinner fa-spin"></i> se déconnecter</a>                
             </div>
               </li>
             </ul>
@@ -93,7 +93,7 @@
         </div>
         <div class="pull-left info">
           <p>Sample Name</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> User</a>
+          <a href="#"><i class="fa fa-circle text-success"></i> Utilisateur</a>
         </div>
       </div> 
       <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -143,7 +143,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="car.php"><i class="fa fa-circle-o"></i> Car</a></li>
+            <li><a href="car.php"><i class="fa fa-circle-o"></i> voiture</a></li>
             <li><a href="costumer.php"><i class="fa fa-circle-o"></i> Costumer</a></li>
             <li><a href="carowner.php"><i class="fa fa-circle-o"></i> Car Owner</a></li>
           </ul>
@@ -190,7 +190,7 @@
                 <div class="form-group">
                   <label>Select Costumer</label>
                   <select class="form-control">
-                    <option>Chistian Jelobadola</option>
+                    <option>Chist DARKU</option>
                     <option>Data</option>
                   </select>
                 </div>
@@ -206,7 +206,7 @@
           </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">fermer</button>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </div>
@@ -233,20 +233,20 @@
                 <tbody>
                 <tr>
                   <td>Date</td>
-                  <td align="center"><span class="btn btn-info btn-xs">56%</span></td>
-                  <td>Sept. 12, 2020</td>
-                  <td>Christian Abelodeboda</td>
+                  <td align="center"><span class="btn btn-info btn-xs">32%</span></td>
+                  <td>Sept. 12, 2022</td>
+                  <td>Dodo KEY</td>
                   <td>888-888-8888</td>
-                  <td>U.S.A China XD</td>
+                  <td>U.S.A charlotte</td>
                   <td align="center"><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit"><i class="fa fa-pencil"></i></button> <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></td>
                 </tr>
                 <tr>
                   <td>Date</td>
-                  <td align="center"><span class="btn btn-info btn-xs">56%</span></td>
-                  <td>Sept. 12, 2020</td>
-                  <td>Christian Abelodeboda</td>
+                  <td align="center"><span class="btn btn-info btn-xs">32%</span></td>
+                  <td>Sept. 12, 2022</td>
+                  <td>Dodo KEY</td>
                   <td>888-888-8888</td>
-                  <td>U.S.A China XD</td>
+                  <td>U.S.A charlotte</td>
                   <td align="center"><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit"><i class="fa fa-pencil"></i></button> <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></td
                 </tr>
                 </tbody>
@@ -279,7 +279,7 @@
                 <div class="form-group">
                   <label>Select Costumer</label>
                   <select class="form-control">
-                    <option>Chistian Jelobadola</option>
+                    <option>Dodo KEY</option>
                     <option>Data</option>
                   </select>
                 </div>
@@ -295,8 +295,8 @@
           </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">fermer</button>
+                <button type="submit" class="btn btn-primary">Soumettre</button>
               </div>
             </div>
             </form>
@@ -318,7 +318,7 @@
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">Car Rental System</a>.</strong> All rights
+    <strong>Copyright &copy; 2022 <a href="https://adminlte.io">Car Rental System</a>.</strong> All rights
     reserved.
   </footer>
 

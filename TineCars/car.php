@@ -1,4 +1,6 @@
-
+<?php
+ require('db.php');
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,7 +69,7 @@
 
                 <p>
                  Sample Name
-                  <small>Membre depuis janvier 2019</small>
+                  <small>Membre depuis Août 2022</small>
                 </p>
               </li>
               <li class="user-footer">

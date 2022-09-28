@@ -1,3 +1,22 @@
+<?php
+// SAVOIR SI LE FORMULAIRE EST VALIDE
+if(isset($_POST["nom"])){
+    $nom = $_POST["nom"];
+    $email = $_POST["email"];
+    $sujet = $_POST["sujet"];
+    $message = $_POST["message"];
+    
+    $to = "augustev005@gmail.com";
+    $headers = "From: $email" ;
+   
+    
+    $mail=mail($to,$sujet,$message,$headers);
+    if($mail) {
+   echo 'message envoyé'; } else {
+   echo  'message non envoyé' ;
+}}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,11 +52,11 @@
         <a href="" class="logo"> <span>Tine</span>Cars </a>
 
         <nav class="navbar">
-            <a href="home">Accueil</a>
-            <a href="vehicles">Voitures</a>
-            <a href="services">Services</a>
-            <a href="featured">Populaires</a>
-            <a href="contact">Contact</a>
+            <a href="#home">Accueil</a>
+            <a href="#featured">Voitures</a>
+            <a href="#services">Services</a>
+            <a href="#vehicles">Populaires</a>
+            <a href="#contact">Contact</a>
         </nav>
 
         <div id="login-btn">
@@ -51,29 +70,29 @@
 
         <span id="close-login-form" class="fas fa-times"></span>
 
-        <form action="">
+        <form action="" method="POST">
             <h3>connexion de l'utilisateur</h3>
             <input type="email" placeholder="email" class="box">
             <input type="mot de passe" placeholder="mot de passe" class="box">
-            <p> oubliez votre mot de passe <a href="#">cliquez ici</a> </p>
+            <p> oubliez votre mot de passe <a href="">cliquez ici</a> </p>
             <input type="s'inscrire" value="connectez-vous" class="btn">
             <p> ou connectez-vous avec </p>
             <div class="buttons">
-                <a href="" class="btn"> google </a>
-                <a href="" class="btn"> facebook </a>
+                <a href="https://www.google.com/?hl=fr  target="_blank" class="btn"> google </a>
+                <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fcampaign%2Flanding.php%3Fcampaign_id%3D1641475131%26extra_1%3Ds%257Cc%257C314925569445%257Ce%257Cfacebook%2527%257C%26placement%26creative%3D314925569445%26keyword%3Dfacebook%2527%26partner_id%3Dgooglesem%26extra_2%3Dcampaignid%253D1641475131%2526adgroupid%253D62126053829%2526matchtype%253De%2526network%253Dg%2526source%253Dnotmobile%2526search_or_content%253Ds%2526device%253Dc%2526devicemodel%253D%2526adposition%253D%2526target%253D%2526targetid%253Dkwd-362360550869%2526loc_physical_ms%253D1012727%2526loc_interest_ms%253D%2526feeditemid%253D%2526param1%253D%2526param2%253D%26gclid%3DEAIaIQobChMI8s2054K2-gIVwuN3Ch2AxwZvEAAYASAAEgJTvPD_BwE" class="btn"  target="_blank"> facebook </a>
             </div>
-            <p> vous n'avez pas de compte <a href="">créez-en un</a> </p>
+            <p> vous n'avez pas de compte <a href="../tinecars/useraccount.php">créez-en un</a> </p>
         </form>
 
     </div>
 
     <section class="home" id="home">
 
-        <h3 data-speed="-2" class="home-parallax">Trouvez la voiture idéale</h3>
+        <h3 data-speed="-2" class="">Trouvez la voiture idéale</h3>
 
-        <img data-speed="5" class="home-parallax turn-image" src="image/VS.png" alt="">
+        <img data-speed="5" class="" src="image/VS.png" alt="">
 
-        <a  href="" class="btn home-parallax">c'est parti !</a>
+        <!-- <a  href="" class="partie">c'est parti !</a> -->
         <div class="tr"></div>
     </section>
 
@@ -411,17 +430,22 @@
 
         </div>
 
-    </section>
+    </section>                             
+    
 
     <section class="newsletter">
 
         <h3>abonnez-vous pour les dernières mises à jour</h3>
-        <p>avec nous ;vous avez les bonnes voitures à un très bon prix</p>
-
-        <form action="">
-            <input type="email" placeholder="entrez votre email">
-            <input type="soumettre" value="s'inscrire">
-        </form>
+        <p>Cliquez pour choisir votre numéro d'immatriculation</p>
+        <div class="car">
+        <!-- <form action=""> -->
+        <a href="https://service-public.gouv.tg/single-administration/61bb073666dc3337885b8dbd" target="_blank" button class="btn btn-danger" type="submit" style="margin-left: 2%" ></button> <i class="fa-duotone fa-car-side"></i> sotoplaque </a>
+        <!-- <button type="but" class="cursor-progress"> -->
+        <!-- </button> -->
+            <!-- <input type="email" placeholder="entrez votre email"> -->
+            <!-- <input type="soumettre" value="s'inscrire"> -->
+        <!-- </form> -->
+    </div>
 
     </section>
 
@@ -435,12 +459,12 @@
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5609.559059406698!2d1.1611072118641212!3d6.190091830637058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102159316891e211%3A0x4faacd232c7bda50!2sPharmacie%20Des%20Ecoles!5e0!3m2!1sfr!2stg!4v1664014634530!5m2!1sfr!2stg" class="map col-lg-6" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="col-lg-6">
-                <form action="">
+                <form action="#" method="POST">
                     <!-- <h3>contactez-nous</h3> -->
-                    <input type="text" placeholder="votre nom" class="box">
-                    <input type="email" placeholder="votre email" class="box">
-                    <input type="tel" placeholder="subject" class="box">
-                    <textarea placeholder="votre message" class="box" cols="30" rows="10"></textarea>
+                    <input type="text" name="nom" placeholder="votre nom" class="box">
+                    <input type="email" name="email" placeholder="votre email" class="box">
+                    <input type="text" name="sujet"  placeholder="sujet" class="box">
+                    <textarea placeholder="votre message" name="message" class="box" cols="30" rows="10"></textarea>
                     <input type="submit" value="envoyer votre message" class="btn">
                 </form>
 
@@ -456,8 +480,10 @@
 
             <div class="box">
                 <h3>NOTRE AGENCE</h3>
+                <a href=""> <i class="fas fa-map-marker-alt"></i> TOGO </a>
                 <a href=""> <i class="fas fa-map-marker-alt"></i> france </a>
                 <a href=""> <i class="fas fa-map-marker-alt"></i> USA </a>
+        
             </div>
 
             <div class="box">
@@ -471,10 +497,10 @@
 
             <div class="box">
                 <h3>contact info</h3>
-                <a href="#"> <i class="fas fa-phone"></i> +22891453651</a>
-                <a href="#"> <i class="fas fa-phone"></i> +22897246538</a>
-                <a href="#"> <i class="fas fa-envelope"></i> augustev005@gmail.com </a>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> lomé, TOGO </a>
+                <a href=""> <i class="fas fa-phone"></i> +22891453651</a>
+                <a href=""> <i class="fas fa-phone"></i> +22897246538</a>
+                <a href=""> <i class="fas fa-envelope"></i> augustev005@gmail.com </a>
+                <a href=""> <i class="fas fa-map-marker-alt"></i> lomé, TOGO </a>
             </div>
 
             <div class="box">
@@ -491,9 +517,6 @@
         <div class="credit"> created by mrs. Augustine dev| all rights reserved </div>
 
     </section>
-
-
-
 
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
